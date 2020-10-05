@@ -37,13 +37,15 @@ void compareInt(int expected, int actual){
 		printf("\n\nYour implementation is not match with c lib!!\n\n");
 }
 
-void compareStrAndFree(char* expected, char* actual){
+void compareStrAndFree(char* expected, char* actual, bool willFree){
 	printf("expected:\t%s\n", expected);
 	printf("actual:  \t%s\n", actual);
 	if (strcmp(expected, actual) != 0)
 		printf("\n\nYour implementation is not match with c lib!!\n\n");
-	SAFE_FREE(expected);
-	SAFE_FREE(actual);
+	if (willFree){
+		SAFE_FREE(expected);
+		SAFE_FREE(actual);
+	}
 }
 
 void compareStrNBytesAndFree(char* expected, char* actual, int n, bool willFree){
@@ -71,8 +73,8 @@ void compareStrNBytesAndFree(char* expected, char* actual, int n, bool willFree)
 
 int main()
 {
-	char str1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char str2[] = "0123456789";
+	char str1[50] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char str2[50] = "0123456789";
 
 	// memset
 	printTitle("memset");
@@ -81,7 +83,7 @@ int main()
 	char memset_c = '1';
 	memset(memset_expected+1, memset_c, 2);
 	ft_memset(memset_actual+1, memset_c, 2);
-	compareStrAndFree(memset_expected, memset_actual);
+	compareStrAndFree(memset_expected, memset_actual, true);
 	
 	// bzero
 	printTitle("bzero");
@@ -89,7 +91,7 @@ int main()
 	char* bzero_actual 		= strdup(str1);
 	bzero(bzero_expected+3, 2);
 	ft_bzero(bzero_actual+3, 2);
-	compareStrAndFree(bzero_expected, bzero_actual);
+	compareStrAndFree(bzero_expected, bzero_actual, true);
 
 	// memcpy
 	printTitle("memcpy");
@@ -98,14 +100,14 @@ int main()
 	char memcpy_str[] 		= "!!!!!!";
 	memcpy(memcpy_expected+3, memcpy_str, 2);
 	ft_memcpy(memcpy_actual+3, memcpy_str, 2);
-	compareStrAndFree(memcpy_expected, memcpy_actual);
+	compareStrAndFree(memcpy_expected, memcpy_actual, true);
 	// memcpy_str が空の場合
 	char* memcpy_expected2 	= strdup(str1);
 	char* memcpy_actual2 	= strdup(str1);
 	char memcpy_str2[] 		= "";
 	memcpy(memcpy_expected2+3, memcpy_str2, 0);
 	ft_memcpy(memcpy_actual2+3, memcpy_str2, 0);
-	compareStrAndFree(memcpy_expected2, memcpy_actual2);
+	compareStrAndFree(memcpy_expected2, memcpy_actual2, true);
 
 	// memccpy
 	printTitle("memccpy");
@@ -123,7 +125,7 @@ int main()
 	char* memmove_actual 	= strdup(str1);
 	memmove(memmove_expected+1, memmove_expected, 24);
 	ft_memmove(memmove_actual+1, memmove_actual, 24);
-	compareStrAndFree(memmove_expected, memmove_actual);
+	compareStrAndFree(memmove_expected, memmove_actual, true);
 
 	// memchr
 	printTitle("memchr");
@@ -164,9 +166,17 @@ int main()
 	printf("%s\n", strlcpy_expected);
 	strlcpy(strlcpy_expected, str2, 10);
     ft_strlcpy(strlcpy_actual, str2, 10);
-	compareStrAndFree(strlcpy_expected, strlcpy_actual);
+	compareStrAndFree(strlcpy_expected, strlcpy_actual, true);
 
 	// strlcat
+	printTitle("strlcat");
+	printf("%s sizeof: %ld\n", str1, sizeof(str1));
+	char strlcat_expected[50] 	= "ABCDEFG";
+	char strlcat_actual[50] 	= "ABCDEFG";
+	printf("%s, sizeof:%ld\n", strlcat_expected, sizeof(strlcat_expected));
+	strlcat(strlcat_expected, str2, sizeof(strlcat_expected));
+    ft_strlcat(strlcat_actual, str2, sizeof(strlcat_actual));
+	compareStrAndFree(strlcat_expected, strlcat_actual, false);
 
 	// strchr
 
