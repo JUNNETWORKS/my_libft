@@ -112,7 +112,18 @@ int main()
 	compareStrAndFree(memmove_expected, memmove_actual);
 
 	// memchr
-	
+	printTitle("memchr");
+	char memchr_c = 'C';
+	char* memchr_expected = memchr(str_expected, memchr_c, 27);
+	char* memchr_actual =ft_memchr(str_expected, memchr_c, 27);
+	printf("expected: %c\t(%p)\n", *memchr_expected, memchr_expected);
+	printf("actual:   %c\t(%p)\n", *memchr_actual, memchr_actual);
+	// マッチしなかったとき
+	char memchr_c2 = '!';
+	char* memchr_expected2 = memchr(str_expected, memchr_c2, 27);
+	char* memchr_actual2 =ft_memchr(str_expected, memchr_c2, 27);
+	printf("expected: \t(%p)\n", memchr_expected2);
+	printf("actual:   \t(%p)\n", memchr_actual2);
 
 	// memcmp
 
