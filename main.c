@@ -170,15 +170,22 @@ int main()
 
 	// strlcat
 	printTitle("strlcat");
-	printf("%s sizeof: %ld\n", str1, sizeof(str1));
 	char strlcat_expected[50] 	= "ABCDEFG";
 	char strlcat_actual[50] 	= "ABCDEFG";
-	printf("%s, sizeof:%ld\n", strlcat_expected, sizeof(strlcat_expected));
 	strlcat(strlcat_expected, str2, sizeof(strlcat_expected));
     ft_strlcat(strlcat_actual, str2, sizeof(strlcat_actual));
 	compareStrAndFree(strlcat_expected, strlcat_actual, false);
 
 	// strchr
+	printTitle("strchr");
+	char* strchr_expected = strchr(str1, 'Z');
+	char* strchr_actual = ft_strchr(str1, 'Z');
+	compareStrAndFree(strchr_expected, strchr_actual, false);
+	char* strchr_expected2 = strchr(str1, '!');
+	char* strchr_actual2 = ft_strchr(str1, '!');
+	printf("expected:\t%p\n", strchr_expected2);
+	printf("actual:  \t%p\n", strchr_actual2);
+	
 
 	return 0;
 }
