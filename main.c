@@ -203,8 +203,29 @@ int main()
 	printf("actual:  \t%p\n", strrchr_actual2);
 
 	// strnstr
+	// https://kaworu.jpn.org/doc/FreeBSD/jman/man3/strstr.3.php
+	printTitle("strnstr");
+	char* strnstr_expected = strnstr(str1, "EFG", 10);
+	char* strnstr_actual = ft_strnstr(str1, "EFG", 10);
+	printf("expected:\t%p\n", strnstr_expected);
+	printf("actual:  \t%p\n", strnstr_actual);
+	char* strnstr_expected2 = strnstr(str1, "ABC", 2);
+	char* strnstr_actual2 = ft_strnstr(str1, "ABC", 2);
+	printf("expected:\t%p\n", strnstr_expected2);
+	printf("actual:  \t%p\n", strnstr_actual2);
+	char* strnstr_expected3 = strnstr(str1, "", 2);
+	char* strnstr_actual3 = ft_strnstr(str1, "", 2);
+	printf("expected:\t%p\n", strnstr_expected3);
+	printf("actual:  \t%p\n", strnstr_actual3);
 
 	// strncmp
+	printTitle("strncmp");
+	int strncmp_expected = strncmp("ABCD", "ABC", 10);
+	int strncmp_actual = ft_strncmp("ABCD", "ABC", 10);
+	compareInt(strncmp_expected, strncmp_actual);
+	int strncmp_expected2 = strncmp("ABC", "ABCCCCCCCCCCCCC", 3);
+	int strncmp_actual2 = ft_strncmp("ABC", "ABCCCCCCCCCCCCC", 3);
+	compareInt(strncmp_expected2, strncmp_actual2);
 
 	// atoi
 
