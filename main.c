@@ -23,6 +23,13 @@ void newLine(int n){
 		printf("\n");
 }
 
+void compareInt(int expected, int actual){
+	printf("expected:\t%d\n", expected);
+	printf("actual:  \t%d\n", actual);
+	if (expected != actual)
+		printf("\n\nYour implementation is not match with c lib!!\n\n");
+}
+
 void compareStrAndFree(char* expected, char* actual){
 	printf("expected:\t%s\n", expected);
 	printf("actual:  \t%s\n", actual);
@@ -126,6 +133,13 @@ int main()
 	printf("actual:   \t(%p)\n", memchr_actual2);
 
 	// memcmp
+	printTitle("memcmp");
+	int memcmp_expected = memcmp("ABC", "ABD", 3);
+	int memcmp_actual = ft_memcmp("ABC", "ABD", 3);
+	compareInt(memcmp_expected, memcmp_actual);
+	int memcmp_expected2 = memcmp("ABC", "ABC", 3);
+	int memcmp_actual2 = ft_memcmp("ABC", "ABC", 3);
+	compareInt(memcmp_expected2, memcmp_actual2);
 
 	// strlen
 
