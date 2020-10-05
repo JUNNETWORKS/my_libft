@@ -178,14 +178,49 @@ int main()
 
 	// strchr
 	printTitle("strchr");
-	char* strchr_expected = strchr(str1, 'Z');
-	char* strchr_actual = ft_strchr(str1, 'Z');
+	char* strchr_str = "ZAAZ";
+	char* strchr_expected = strchr(strchr_str, 'Z');
+	char* strchr_actual = ft_strchr(strchr_str, 'Z');
+	printf("expected:\t%p\n", strchr_expected);
+	printf("actual:  \t%p\n", strchr_actual);
 	compareStrAndFree(strchr_expected, strchr_actual, false);
 	char* strchr_expected2 = strchr(str1, '!');
 	char* strchr_actual2 = ft_strchr(str1, '!');
 	printf("expected:\t%p\n", strchr_expected2);
 	printf("actual:  \t%p\n", strchr_actual2);
 	
+	// strrchr
+	printTitle("strrchr");
+	char* strrchr_str = "ZAAZ";
+	char* strrchr_expected = strrchr(strrchr_str, 'Z');
+	char* strrchr_actual = ft_strrchr(strrchr_str, 'Z');
+	printf("expected:\t%p\n", strrchr_expected);
+	printf("actual:  \t%p\n", strrchr_actual);
+	compareStrAndFree(strrchr_expected, strrchr_actual, false);
+	char* strrchr_expected2 = strrchr(str1, '!');
+	char* strrchr_actual2 = ft_strrchr(str1, '!');
+	printf("expected:\t%p\n", strrchr_expected2);
+	printf("actual:  \t%p\n", strrchr_actual2);
+
+	// strnstr
+
+	// strncmp
+
+	// atoi
+
+	// isalpha
+
+	// isdigit
+
+	// isalnum
+
+	// isascii
+
+	// isprint
+
+	// toupper
+
+	// tolower
 
 	return 0;
 }
