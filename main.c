@@ -38,6 +38,13 @@ void compareInt(int expected, int actual){
 		printf("\n\nYour implementation is not match with c lib!!\n\n");
 }
 
+void compareChar(char expected, char actual){
+	printf("expected:\t%c\n", expected);
+	printf("actual:  \t%c\n", actual);
+	if (expected != actual)
+		printf("\n\nYour implementation is not match with c lib!!\n\n");
+}
+
 void compareStrAndFree(char* expected, char* actual, bool willFree){
 	printf("expected:\t%s\n", expected);
 	printf("actual:  \t%s\n", actual);
@@ -343,6 +350,25 @@ int main()
 	compareInt(isprint_expected5 != 0 ? 1 : 0, isprint_actual5 != 0 ? 1 : 0);
 
 	// toupper
+	printTitle("toupper");
+	char toupper_expected0 = toupper('0');
+	char toupper_actual0 = ft_toupper('0');
+	compareChar(toupper_expected0, toupper_actual0);
+	char toupper_expected1 = toupper('a');
+	char toupper_actual1 = ft_toupper('a');
+	compareChar(toupper_expected1, toupper_actual1);
+	char toupper_expected2 = toupper('A');
+	char toupper_actual2 = ft_toupper('A');
+	compareChar(toupper_expected2, toupper_actual2);
+	char toupper_expected3 = toupper('\t');
+	char toupper_actual3 = ft_toupper('\t');
+	compareChar(toupper_expected3, toupper_actual3);
+	char toupper_expected4 = toupper('~');
+	char toupper_actual4 = ft_toupper('~');
+	compareChar(toupper_expected4, toupper_actual4);
+	char toupper_expected5 = toupper('z');
+	char toupper_actual5 = ft_toupper('z');
+	compareChar(toupper_expected5, toupper_actual5);
 
 	// tolower
 
