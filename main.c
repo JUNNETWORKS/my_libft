@@ -14,6 +14,7 @@ sudo apt install -y libbsd-dev
 #include <stdlib.h>
 #include <bsd/string.h>
 #include <string.h>
+#include <ctype.h>
 #include <stdbool.h>
 
 # define SAFE_FREE(ptr) { \
@@ -255,7 +256,20 @@ int main()
 	compareInt(atoi_expected5, atoi_actual5);
 
 	// isalpha
-
+	printTitle("isalpha");
+	int isalpha_expected0 = isalpha('A');
+	int isalpha_actual0 = ft_isalpha('A');
+	compareInt(isalpha_expected0 != 0 ? 1 : 0, isalpha_actual0 != 0 ? 1 : 0);
+	int isalpha_expected1 = isalpha('Z');
+	int isalpha_actual1 = ft_isalpha('Z');
+	compareInt(isalpha_expected1 != 0 ? 1 : 0, isalpha_actual1 != 0 ? 1 : 0);
+	int isalpha_expected2 = isalpha('^');
+	int isalpha_actual2 = ft_isalpha('^');
+	compareInt(isalpha_expected2 != 0 ? 1 : 0, isalpha_actual2 != 0 ? 1 : 0);
+	int isalpha_expected3 = isalpha('\n');
+	int isalpha_actual3 = ft_isalpha('\n');
+	compareInt(isalpha_expected3 != 0 ? 1 : 0, isalpha_actual3 != 0 ? 1 : 0);
+	
 	// isdigit
 
 	// isalnum
