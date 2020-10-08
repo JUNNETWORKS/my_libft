@@ -219,8 +219,8 @@ int main()
 	printf("actual:  \t%p\n", strnstr_actual3);
 
 	// strncmp
-	printTitle("strncmp");
 	int strncmp_expected = strncmp("ABCD", "ABC", 10);
+	printTitle("strncmp");
 	int strncmp_actual = ft_strncmp("ABCD", "ABC", 10);
 	compareInt(strncmp_expected, strncmp_actual);
 	int strncmp_expected2 = strncmp("ABC", "ABCCCCCCCCCCCCC", 3);
@@ -228,6 +228,31 @@ int main()
 	compareInt(strncmp_expected2, strncmp_actual2);
 
 	// atoi
+	printTitle("atoi");
+	char atoi_input0[] = "12345";
+	char atoi_input1[] = "500.5abc";
+	char atoi_input2[] = "2468";
+	char atoi_input3[] = "-1234";
+	char atoi_input4[] = "+1234";
+	char atoi_input5[] = "abc";
+	int atoi_expected0 = atoi(atoi_input0);
+	int atoi_actual0 = ft_atoi(atoi_input0);
+	compareInt(atoi_expected0, atoi_actual0);
+	int atoi_expected1 = atoi(atoi_input1);
+	int atoi_actual1 = ft_atoi(atoi_input1);
+	compareInt(atoi_expected1, atoi_actual1);
+	int atoi_expected2 = atoi(atoi_input2);
+	int atoi_actual2 = ft_atoi(atoi_input2);
+	compareInt(atoi_expected2, atoi_actual2);
+	int atoi_expected3 = atoi(atoi_input3);
+	int atoi_actual3 = ft_atoi(atoi_input3);
+	compareInt(atoi_expected3, atoi_actual3);
+	int atoi_expected4 = atoi(atoi_input4);
+	int atoi_actual4 = ft_atoi(atoi_input4);
+	compareInt(atoi_expected4, atoi_actual4);
+	int atoi_expected5 = atoi(atoi_input5);
+	int atoi_actual5 = ft_atoi(atoi_input5);
+	compareInt(atoi_expected5, atoi_actual5);
 
 	// isalpha
 
