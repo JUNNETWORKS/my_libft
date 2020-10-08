@@ -286,6 +286,19 @@ int main()
 	compareInt(isdigit_expected3 != 0 ? 1 : 0, isdigit_actual3 != 0 ? 1 : 0);
 
 	// isalnum
+	printTitle("isalnum");
+	int isalnum_expected0 = isalnum('0');
+	int isalnum_actual0 = ft_isalnum('0');
+	compareInt(isalnum_expected0 != 0 ? 1 : 0, isalnum_actual0 != 0 ? 1 : 0);
+	int isalnum_expected1 = isalnum('9');
+	int isalnum_actual1 = ft_isalnum('9');
+	compareInt(isalnum_expected1 != 0 ? 1 : 0, isalnum_actual1 != 0 ? 1 : 0);
+	int isalnum_expected2 = isalnum('A');
+	int isalnum_actual2 = ft_isalnum('A');
+	compareInt(isalnum_expected2 != 0 ? 1 : 0, isalnum_actual2 != 0 ? 1 : 0);
+	int isalnum_expected3 = isalnum('\n');
+	int isalnum_actual3 = ft_isalnum('\n');
+	compareInt(isalnum_expected3 != 0 ? 1 : 0, isalnum_actual3 != 0 ? 1 : 0);
 
 	// isascii
 
