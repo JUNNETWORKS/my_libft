@@ -322,6 +322,25 @@ int main()
 	compareInt(isascii_expected5 != 0 ? 1 : 0, isascii_actual5 != 0 ? 1 : 0);
 
 	// isprint
+	printTitle("isprint");
+	int isprint_expected0 = isprint('0');
+	int isprint_actual0 = ft_isprint('0');
+	compareInt(isprint_expected0 != 0 ? 1 : 0, isprint_actual0 != 0 ? 1 : 0);
+	int isprint_expected1 = isprint('9');
+	int isprint_actual1 = ft_isprint('9');
+	compareInt(isprint_expected1 != 0 ? 1 : 0, isprint_actual1 != 0 ? 1 : 0);
+	int isprint_expected2 = isprint('A');
+	int isprint_actual2 = ft_isprint('A');
+	compareInt(isprint_expected2 != 0 ? 1 : 0, isprint_actual2 != 0 ? 1 : 0);
+	int isprint_expected3 = isprint('\n');
+	int isprint_actual3 = ft_isprint('\n');
+	compareInt(isprint_expected3 != 0 ? 1 : 0, isprint_actual3 != 0 ? 1 : 0);
+	int isprint_expected4 = isprint('~');
+	int isprint_actual4 = ft_isprint('~');
+	compareInt(isprint_expected4 != 0 ? 1 : 0, isprint_actual4 != 0 ? 1 : 0);
+	int isprint_expected5 = isprint('\0');
+	int isprint_actual5 = ft_isprint('\0');
+	compareInt(isprint_expected5 != 0 ? 1 : 0, isprint_actual5 != 0 ? 1 : 0);
 
 	// toupper
 
