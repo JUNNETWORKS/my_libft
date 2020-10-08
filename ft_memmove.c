@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 01:35:52 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/06 01:53:18 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/09 02:54:43 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *buf = malloc(n);
-	char *src_str = (char*)src;
-	char *dest_str = (char*)dest;
+	unsigned char *buf = malloc(n);
+	unsigned char *src_str = (unsigned char*)src;
+	unsigned char *dest_str = (unsigned char*)dest;
 	int n_int;
 	int idx;
 	
