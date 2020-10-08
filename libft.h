@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 00:05:30 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/09 03:42:21 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/09 03:46:38 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
 int ft_toupper(int c);
+int ft_tolower(int c);
 
 #endif

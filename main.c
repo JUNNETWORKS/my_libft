@@ -371,6 +371,25 @@ int main()
 	compareChar(toupper_expected5, toupper_actual5);
 
 	// tolower
+	printTitle("tolower");
+	char tolower_expected0 = tolower('0');
+	char tolower_actual0 = ft_tolower('0');
+	compareChar(tolower_expected0, tolower_actual0);
+	char tolower_expected1 = tolower('a');
+	char tolower_actual1 = ft_tolower('a');
+	compareChar(tolower_expected1, tolower_actual1);
+	char tolower_expected2 = tolower('A');
+	char tolower_actual2 = ft_tolower('A');
+	compareChar(tolower_expected2, tolower_actual2);
+	char tolower_expected3 = tolower('\t');
+	char tolower_actual3 = ft_tolower('\t');
+	compareChar(tolower_expected3, tolower_actual3);
+	char tolower_expected4 = tolower('~');
+	char tolower_actual4 = ft_tolower('~');
+	compareChar(tolower_expected4, tolower_actual4);
+	char tolower_expected5 = tolower('Z');
+	char tolower_actual5 = ft_tolower('Z');
+	compareChar(tolower_expected5, tolower_actual5);
 
 	return 0;
 }
