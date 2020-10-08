@@ -260,8 +260,8 @@ int main()
 	int isalpha_expected0 = isalpha('A');
 	int isalpha_actual0 = ft_isalpha('A');
 	compareInt(isalpha_expected0 != 0 ? 1 : 0, isalpha_actual0 != 0 ? 1 : 0);
-	int isalpha_expected1 = isalpha('Z');
-	int isalpha_actual1 = ft_isalpha('Z');
+	int isalpha_expected1 = isalpha('z');
+	int isalpha_actual1 = ft_isalpha('z');
 	compareInt(isalpha_expected1 != 0 ? 1 : 0, isalpha_actual1 != 0 ? 1 : 0);
 	int isalpha_expected2 = isalpha('^');
 	int isalpha_actual2 = ft_isalpha('^');
@@ -271,6 +271,19 @@ int main()
 	compareInt(isalpha_expected3 != 0 ? 1 : 0, isalpha_actual3 != 0 ? 1 : 0);
 	
 	// isdigit
+	printTitle("isdigit");
+	int isdigit_expected0 = isdigit('0');
+	int isdigit_actual0 = ft_isdigit('0');
+	compareInt(isdigit_expected0 != 0 ? 1 : 0, isdigit_actual0 != 0 ? 1 : 0);
+	int isdigit_expected1 = isdigit('9');
+	int isdigit_actual1 = ft_isdigit('9');
+	compareInt(isdigit_expected1 != 0 ? 1 : 0, isdigit_actual1 != 0 ? 1 : 0);
+	int isdigit_expected2 = isdigit('A');
+	int isdigit_actual2 = ft_isdigit('A');
+	compareInt(isdigit_expected2 != 0 ? 1 : 0, isdigit_actual2 != 0 ? 1 : 0);
+	int isdigit_expected3 = isdigit('\n');
+	int isdigit_actual3 = ft_isdigit('\n');
+	compareInt(isdigit_expected3 != 0 ? 1 : 0, isdigit_actual3 != 0 ? 1 : 0);
 
 	// isalnum
 
