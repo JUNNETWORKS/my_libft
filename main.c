@@ -301,6 +301,25 @@ int main()
 	compareInt(isalnum_expected3 != 0 ? 1 : 0, isalnum_actual3 != 0 ? 1 : 0);
 
 	// isascii
+	printTitle("isascii");
+	int isascii_expected0 = isascii('0');
+	int isascii_actual0 = ft_isascii('0');
+	compareInt(isascii_expected0 != 0 ? 1 : 0, isascii_actual0 != 0 ? 1 : 0);
+	int isascii_expected1 = isascii('9');
+	int isascii_actual1 = ft_isascii('9');
+	compareInt(isascii_expected1 != 0 ? 1 : 0, isascii_actual1 != 0 ? 1 : 0);
+	int isascii_expected2 = isascii('A');
+	int isascii_actual2 = ft_isascii('A');
+	compareInt(isascii_expected2 != 0 ? 1 : 0, isascii_actual2 != 0 ? 1 : 0);
+	int isascii_expected3 = isascii('\n');
+	int isascii_actual3 = ft_isascii('\n');
+	compareInt(isascii_expected3 != 0 ? 1 : 0, isascii_actual3 != 0 ? 1 : 0);
+	int isascii_expected4 = isascii(127);
+	int isascii_actual4 = ft_isascii(127);
+	compareInt(isascii_expected4 != 0 ? 1 : 0, isascii_actual4 != 0 ? 1 : 0);
+	int isascii_expected5 = isascii(128);
+	int isascii_actual5 = ft_isascii(128);
+	compareInt(isascii_expected5 != 0 ? 1 : 0, isascii_actual5 != 0 ? 1 : 0);
 
 	// isprint
 
