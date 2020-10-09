@@ -6,13 +6,14 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 02:58:56 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/09 03:07:28 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/10 02:47:35 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr){
+int		ft_atoi(const char *nptr)
+{
 	unsigned int	num;
 	int				i;
 	int				np;

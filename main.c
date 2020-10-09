@@ -390,6 +390,6 @@ int main()
 	char tolower_expected5 = tolower('Z');
 	char tolower_actual5 = ft_tolower('Z');
 	compareChar(tolower_expected5, tolower_actual5);
-
+	
 	return 0;
 }

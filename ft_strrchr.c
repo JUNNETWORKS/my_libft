@@ -6,16 +6,16 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 04:58:56 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/06 05:05:34 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/10 03:44:37 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char* str;
-	int i;
+	char	*str;
+	int		i;
 
 	str = (char*)s;
 	i = 0;
