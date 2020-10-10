@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 00:05:30 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 02:59:06 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/11 03:11:38 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int			ft_tolower(int c);
 void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
 
 #endif
