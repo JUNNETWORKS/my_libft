@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 04:07:10 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 02:14:34 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/11 04:45:35 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strdup(const char *s)
 	if (new_str == NULL)
 		return (NULL);
 	i = 0;
-	while (i < s_len){
+	while (i < s_len)
+	{
 		new_str[i] = s[i];
 		i++;
 	}

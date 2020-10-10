@@ -6,13 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 03:11:11 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 03:18:39 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/11 04:47:05 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*str;
 	char			*ans;

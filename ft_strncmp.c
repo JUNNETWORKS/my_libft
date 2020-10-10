@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 05:19:25 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 01:13:31 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/11 04:46:13 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
-	unsigned char *str1;
-	unsigned char *str2;
+	int				i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;
