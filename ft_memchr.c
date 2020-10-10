@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 01:56:41 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/10 03:12:41 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/11 00:09:29 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	str = (unsigned char*)s;
 	idx = 0;
-	while (idx < (int)n && str[idx])
+	while (idx < (int)n)
 	{
-		if (str[idx] == c)
+		if (str[idx] == (unsigned char)c)
 			return (str + idx);
 		idx++;
 	}
