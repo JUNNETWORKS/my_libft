@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 00:05:30 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 17:43:51 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:05:55 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_atoi(const char *nptr);
+int     get_digitll(long long n);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -49,5 +50,6 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 #endif

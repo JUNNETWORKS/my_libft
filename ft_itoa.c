@@ -6,13 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 03:03:37 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:04:29 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_digit(int n)
+int		get_digitll(long long n)
 {
 	int		digit;
 
@@ -29,31 +29,31 @@ int		get_digit(int n)
 
 char	*ft_itoa(int n)
 {
-	int		allocation_size;
-	int		digit;
-	char	*result;
-	int		idx;
-	long	nl;
+	int			allocation_size;
+	int			digit;
+	char		*result;
+	int			idx;
+	long long	nll;
 
-	digit = get_digit(n);
-	allocation_size = n < 0 ? digit + 2 : digit + 1;
+	nll = (long long)n;
+	digit = get_digitll(nll);
+	allocation_size = nll < 0 ? digit + 2 : digit + 1;
 	result = (char*)malloc(allocation_size);
 	if (result == NULL)
 		return (result);
 	result[allocation_size - 1] = '\0';
-	nl = (long)n;
-	if (nl < 0)
+	if (nll < 0)
 	{
 		result[0] = '-';
-		nl *= -1;
+		nll *= -1;
 	}
 	idx = allocation_size - 2;
-	if (nl == 0)
+	if (nll == 0)
 		result[0] = '0';
-	while (nl)
+	while (nll)
 	{
-		result[idx] = '0' + (nl % 10);
-		nl /= 10;
+		result[idx] = '0' + (nll % 10);
+		nll /= 10;
 		idx--;
 	}
 	return (result);
