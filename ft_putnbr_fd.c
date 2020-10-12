@@ -6,13 +6,28 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:45:34 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:18:55 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:39:46 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static	int		get_digitll(long long n)
+{
+	int		digit;
+
+	digit = 0;
+	while (n)
+	{
+		n /= 10;
+		digit++;
+	}
+	if (digit == 0)
+		digit++;
+	return (digit);
+}
+
+void			ft_putnbr_fd(int n, int fd)
 {
 	int			allocation_size;
 	int			digit;

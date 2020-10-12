@@ -6,13 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:10:52 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:39:34 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_digitll(long long n)
+static	int		get_digitll(long long n)
 {
 	int		digit;
 
@@ -27,7 +27,7 @@ int		get_digitll(long long n)
 	return (digit);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int			allocation_size;
 	int			digit;
