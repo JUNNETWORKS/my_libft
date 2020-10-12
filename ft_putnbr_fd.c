@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:45:34 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:06:03 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:18:55 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,8 @@ void	ft_putnbr_fd(int n, int fd)
 		result[0] = '0';
 	while (nll)
 	{
-		result[idx] = '0' + (nll % 10);
+		result[idx--] = '0' + (nll % 10);
 		nll /= 10;
-		idx--;
 	}
 	ft_putstr_fd(result, fd);
 }

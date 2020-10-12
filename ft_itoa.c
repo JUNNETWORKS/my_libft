@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:04:29 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:10:52 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,9 @@ char	*ft_itoa(int n)
 	if (result == NULL)
 		return (result);
 	result[allocation_size - 1] = '\0';
-	if (nll < 0)
-	{
-		result[0] = '-';
-		nll *= -1;
-	}
+	result[0] = nll < 0 ? '-' : '0';
+	nll *= nll < 0 ? -1 : 1;
 	idx = allocation_size - 2;
-	if (nll == 0)
-		result[0] = '0';
 	while (nll)
 	{
 		result[idx] = '0' + (nll % 10);

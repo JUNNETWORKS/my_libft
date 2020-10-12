@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 04:52:46 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 02:41:15 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 18:19:26 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**split(char **result, char *str, char c)
 	return (result);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		split_size;
 	char	**result;
