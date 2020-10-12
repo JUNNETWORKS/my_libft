@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 01:35:52 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 00:00:03 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/12 19:04:47 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	int				n_int;
 	int				idx;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	src_bytes = (unsigned char*)src;
 	dest_bytes = (unsigned char*)dest;
 	n_int = (int)n;
