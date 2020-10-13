@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 21:55:36 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 22:01:31 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/14 04:10:28 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	del(lst_tmp->content);
 	free(lst_tmp);
+	*lst = NULL;
 }
