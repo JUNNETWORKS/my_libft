@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 21:44:54 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 21:44:55 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/14 01:55:30 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
+	*lst = new;
 }
