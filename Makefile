@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2020/10/12 22:21:27 by jtanaka          ###   ########.fr        #
+#    Updated: 2020/10/13 02:45:57 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,9 +79,9 @@ fclean: clean
 re: fclean all
 
 so:
-	gcc -shared -o libft.so ${SRCS}
+	gcc -shared -o libft.so ${SRCS} ${B_SRCS}
 
-bonus: ${B_OBJS}
-	ar rc ${NAME} ${OBJS} ${B_OBJS}
+bonus: ${B_OBJS} ${OBJS}
+	ar rc ${NAME} ${B_OBJS} ${OBJS}
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re so bonus
