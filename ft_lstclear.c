@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 21:55:36 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/14 04:19:11 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/15 02:16:56 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*previous;
 
 	lst_tmp = *lst;
-	while (lst_tmp->next != NULL)
+	while (lst_tmp)
 	{
 		del(lst_tmp->content);
 		previous = lst_tmp;
 		lst_tmp = lst_tmp->next;
 		free(previous);
 	}
-	del(lst_tmp->content);
-	free(lst_tmp);
 	*lst = NULL;
 }
