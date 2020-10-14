@@ -6,13 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 04:52:46 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:19:26 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/15 03:40:59 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcpy(char *dest, char *src, int n)
+static	void	ft_strcpy(char *dest, char *src, int n)
 {
 	int		i;
 
@@ -24,7 +24,7 @@ void	ft_strcpy(char *dest, char *src, int n)
 	}
 }
 
-int		get_split_size(char *str, char c)
+static	int		get_split_size(char *str, char c)
 {
 	int		split_size;
 
@@ -42,7 +42,7 @@ int		get_split_size(char *str, char c)
 	return (split_size);
 }
 
-char	**split(char **result, char *str, char c)
+char			**split(char **result, char *str, char c)
 {
 	int		i;
 	int		len;
@@ -68,7 +68,7 @@ char	**split(char **result, char *str, char c)
 	return (result);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	int		split_size;
 	char	**result;

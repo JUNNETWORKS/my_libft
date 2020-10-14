@@ -6,13 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 05:09:40 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/10 03:43:48 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/15 03:41:18 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		substr_in_front(const char *big, const char *little)
+static	int	substr_in_front(const char *big, const char *little)
 {
 	int	little_len;
 	int	i;
@@ -28,7 +28,7 @@ int		substr_in_front(const char *big, const char *little)
 	return (1);
 }
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int big_len;
 	int little_len;
