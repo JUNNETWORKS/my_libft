@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 00:41:14 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/10 02:48:19 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/16 01:20:11 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
+	unsigned char	*mem;
 	int				counter;
 
-	str = (unsigned char*)s;
+	mem = (unsigned char*)s;
 	counter = n;
 	while (counter--)
-		*str++ = '\0';
+		*mem++ = '\0';
 }
