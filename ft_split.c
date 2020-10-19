@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 04:52:46 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/15 03:40:59 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/17 14:27:18 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static	int		get_split_size(char *str, char c)
 	return (split_size);
 }
 
-char			**split(char **result, char *str, char c)
+static char			**split(char **result, char *str, char c)
 {
 	int		i;
 	int		len;
