@@ -6,31 +6,43 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 02:58:56 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/10 02:47:35 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/20 04:03:57 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+static int	num_len(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (ft_isdigit(*str++))
+		i++;
+	return (i);
+}
+
+int			ft_atoi(const char *nptr)
 {
 	unsigned int	num;
-	int				i;
 	int				np;
 
 	np = 1;
-	i = 0;
 	num = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\f' ||
-			nptr[i] == '\r' || nptr[i] == '\n' || nptr[i] == '\v')
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-		if (nptr[i++] == '-')
+	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\f' ||
+			*nptr == '\r' || *nptr == '\n' || *nptr == '\v')
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
+		if (*nptr++ == '-')
 			np = -1;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	if (num_len(nptr) >= 19)
 	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
+		if (np == -1 && ft_strncmp(nptr, "9223372036854775808", 19) > 0)
+			return (0);
+		if (np == 1 && ft_strncmp(nptr, "9223372036854775807", 19) > 0)
+			return (-1);
 	}
+	while (ft_isdigit(*nptr))
+		num = num * 10 + (*nptr++ - '0');
 	return ((int)(np * num));
 }
