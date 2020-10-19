@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 21:31:42 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/15 02:18:33 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/16 22:27:30 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	new_list = (t_list*)malloc(sizeof(t_list));
 	if (!new_list)
 		return (NULL);
-	new_list->content = content ? content : NULL;
+	new_list->content = content;
 	new_list->next = NULL;
 	return (new_list);
 }

@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 03:19:24 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/16 01:48:35 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/19 10:00:30 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static	int	in_set(char c, char *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char			*result_str;
 	int				idx;
 	int				start_idx;
 	int				last_idx;
@@ -44,12 +43,5 @@ char		*ft_strtrim(char const *s1, char const *set)
 		last_idx = --idx;
 	if (start_idx >= last_idx)
 		return (ft_calloc(sizeof(char), 1));
-	result_str = malloc(last_idx - start_idx + 2);
-	if (result_str == NULL)
-		return (NULL);
-	idx = 0;
-	while (start_idx <= last_idx)
-		result_str[idx++] = s1[start_idx++];
-	result_str[idx] = '\0';
-	return (result_str);
+	return (ft_substr(s1, start_idx, last_idx - start_idx + 1));
 }
