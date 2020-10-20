@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:45:34 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/16 02:01:43 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/20 16:24:55 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,8 @@ void			ft_putnbr_fd(int n, int fd)
 
 	nll = (long long)n;
 	digit = get_digitll(nll);
-	allocation_size = n < 0 ? digit + 2 : digit + 1;
+	allocation_size = nll < 0 ? digit + 2 : digit + 1;
 	result[allocation_size - 1] = '\0';
-	nll = (long long)n;
 	if (nll < 0)
 	{
 		result[0] = '-';

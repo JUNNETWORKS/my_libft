@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/16 01:55:05 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/20 16:27:06 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ char			*ft_itoa(int n)
 	nll = (long long)n;
 	digit = get_digitll(nll);
 	allocation_size = nll < 0 ? digit + 2 : digit + 1;
-	result = (char*)malloc(allocation_size);
-	if (result == NULL)
+	if (!(result = (char*)malloc(allocation_size)))
 		return (result);
 	result[allocation_size - 1] = '\0';
 	result[0] = nll < 0 ? '-' : '0';

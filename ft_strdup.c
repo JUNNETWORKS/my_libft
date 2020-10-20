@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 04:07:10 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/11 04:45:35 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/20 16:00:27 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ char	*ft_strdup(const char *s)
 	unsigned int	i;
 
 	s_len = ft_strlen(s);
-	new_str = (char*)malloc(s_len + 1);
-	if (new_str == NULL)
+	if (!(new_str = (char*)malloc(s_len + 1)))
 		return (NULL);
 	i = 0;
 	while (i < s_len)
