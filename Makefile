@@ -6,14 +6,13 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2020/10/16 03:11:15 by jtanaka          ###   ########.fr        #
+#    Updated: 2020/10/20 23:40:08 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAG = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-LIBH = libft.h
 SRCS =	ft_strlen.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
@@ -60,10 +59,6 @@ B_SRCS=	ft_lstnew.c \
 		ft_lstmap.c
 OBJS = $(SRCS:.c=.o)
 B_OBJS = $(B_SRCS:.c=.o)
-HEADER = libft.h
-
-.c.o:
-	${CC} ${CFLAG} -c $< -o ${<:.c=.o}
 
 all: $(NAME)
 
