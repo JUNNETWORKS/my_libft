@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 05:09:40 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 23:19:49 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 18:10:08 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int big_len;
-	int little_len;
-	int i;
+	size_t big_len;
+	size_t little_len;
+	size_t i;
 
 	if (*little == '\0')
 		return ((char*)big);
 	big_len = ft_strlen(big);
 	little_len = ft_strlen(little);
 	i = 0;
-	while (i <= ((int)len - little_len) && i < big_len)
+	while (i + little_len <= len && i < big_len)
 	{
 		if (ft_strncmp(big + i, little, little_len) == 0)
 			return ((char*)big + i);

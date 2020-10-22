@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 02:58:56 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 04:03:57 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/21 23:35:38 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ int			ft_atoi(const char *nptr)
 	if (*nptr == '+' || *nptr == '-')
 		if (*nptr++ == '-')
 			np = -1;
-	if (num_len(nptr) >= 19)
+	if (num_len(nptr) > 19)
+		return (np == 1 ? -1 : 0);
+	if (num_len(nptr) == 19)
 	{
 		if (np == -1 && ft_strncmp(nptr, "9223372036854775808", 19) > 0)
 			return (0);

@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 03:25:03 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/16 01:30:21 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 17:54:20 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	src_i;
-	unsigned int	dest_i;
-	unsigned int	dest_len;
-	unsigned int	src_len;
+	size_t	src_i;
+	size_t	dest_i;
+	size_t	dest_len;
+	size_t	src_len;
 
 	if (size <= ft_strlen(dst))
 		return (ft_strlen(src) + size);

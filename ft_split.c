@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 04:52:46 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 23:17:24 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 18:27:09 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ static void		free_n(char **arr, size_t n)
 
 static char		**split(char **result, char *str, char c)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;

@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 03:04:59 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/12 18:18:19 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 18:22:46 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	idx;
-	unsigned int	s_len;
+	size_t			s_len;
 	char			*result;
 
 	s_len = ft_strlen(s);
-	result = malloc(s_len + 1);
-	if (result == NULL)
+	if (!(result = malloc(s_len + 1)))
 		return (NULL);
 	idx = 0;
 	while (s[idx])

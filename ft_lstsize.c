@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 21:45:15 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/15 02:19:08 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 18:33:54 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
+	size_t	size;
 
-	if (!lst)
-		return (0);
 	size = 0;
 	while (lst)
 	{

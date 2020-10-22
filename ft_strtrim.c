@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 03:19:24 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 23:23:33 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/21 23:55:32 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	int				start_idx;
 	int				last_idx;
 
-	if (s1 == NULL || *s1 == '\0')
+	if (!s1 || !*s1)
 		return (ft_calloc(sizeof(char), 1));
 	start_idx = 0;
 	idx = 0;

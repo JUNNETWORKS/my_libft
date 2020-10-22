@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 02:57:49 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 23:20:30 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/10/22 18:00:32 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int src_len;
-	unsigned int i;
+	size_t	src_len;
+	size_t	i;
 
 	src_len = ft_strlen(src);
 	i = 0;
