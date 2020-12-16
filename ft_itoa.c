@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/20 16:27:06 by jtanaka          ###   ########.fr       */
+/*   Updated: 2020/12/16 09:15:54 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,8 @@ static	int		get_digitll(long long n)
 {
 	int		digit;
 
-	digit = 0;
-	while (n)
-	{
-		n /= 10;
-		digit++;
-	}
-	if (digit == 0)
+	digit = 1;
+	while (n /= 10)
 		digit++;
 	return (digit);
 }
