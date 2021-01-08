@@ -3,7 +3,7 @@
 
 #define MAX_A 100000
 
-static void swap(int *a, int *b)
+static void	swap(int *a, int *b)
 {
   int	tmp;
 
@@ -12,53 +12,69 @@ static void swap(int *a, int *b)
   *b = tmp;
 }
 
-static int get_median(int A[], int begin, int end)
+static int	get_median(int A[], int begin, int end)
 {
-	int left = A[begin];
-	int mid = A[(end - 1 - begin) / 2];
-	int right = A[end-1];
+	int		left = A[begin];
+	int		mid = A[(end - 1 - begin) / 2];
+	int		right = A[end-1];
 
 	printf("left: %d, mid: %d, right: %d\n", left, mid, right);
 
 	if (left < mid){
-	  if (left > right){
-		return left;
-	  }
-	  else if (right > mid){
-		return mid;
-	  }
-	  return right;
+		if (left > right){
+			return left;
+		}
+		else if (right > mid){
+			return mid;
+		}
+		return right;
 	}else{
-	  if (left < right){
-		return left;
-	  }
-	  else if (right < mid){
-		return mid;
-	  }
-	  return right;
+		if (left < right){
+			return left;
+		}
+		else if (right < mid){
+			return mid;
+		}
+		return right;
 	}
 }
 
-int partition(int A[], int begin, int end)
+int			partition(int A[], int begin, int end)
 {
 	int base;
 	int i;
 	int j;
 
 	// 3つ要素を取り出して, その中央値を使う
-	base = get_median(A, begin, end);
+	base = (end - begin - 1) >= 3 ? get_median(A, begin, end) : A[end-1];
 	printf("base: %d\n", base);
-	i = begin - 1;
+	i = begin;
 	j = begin;
 	while (j < end)
 	{
 		if (A[j] <= base){
-		  i++;
-		  swap(&A[i], &A[j]);
+			swap(&A[i], &A[j]);
+			i++;
 		}
 		j++;
 	}
 	return (i);
+}
+
+void quick_sort(int A[], int begin, int end)
+{
+	int mid;
+
+	if (begin < end)
+	{
+		sleep(1);
+		printf("begin: %d, end: %d\n", begin, end);
+		mid = partition(A, begin, end);
+		printf("mid: %d\n", mid);
+		for (int i = 0; i < 12; i++) printf("%d ", A[i]); printf("\n\n");
+		quick_sort(A, begin, mid);
+		quick_sort(A, mid + 1, end);
+	}
 }
 
 int main(){
@@ -72,8 +88,10 @@ int main(){
 	for (int i = 0; i < n; i++) printf ("%d ", A[i]);
 	printf("\n");
 
+	/*
 	int mid = partition(A, 0, n);
 
+	printf("\nafter partition\n");
 	for (int i = 0; i < n; i++){
 	  if (i == mid){
 		printf("[%d]", A[i]);
@@ -84,4 +102,10 @@ int main(){
 		printf(" ");
 	}
 	printf("\n");
+	*/
+
+	quick_sort(A, 0, n);
+
+	printf("\nafter quick_sort\n");
+	for (int i = 0; i < n; i++) printf ("%d ", A[i]);
 }
