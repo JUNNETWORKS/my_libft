@@ -34,6 +34,18 @@ int partition(int A[], int p, int r)
 	return (i + 1);
 }
 
+void quick_sort(int A[], int p, int r)
+{
+	int q;
+
+	if (p < r)
+	{
+		q = partition(A, p, r);
+		quick_sort(A, p, q - 1);
+		quick_sort(A, q + 1, r);
+	}
+}
+
 int main(){
 	int A[MAX_A];
 	int n;
@@ -53,6 +65,15 @@ int main(){
 	  }else{
 		printf("%d", A[i]);
 	  }
+	  if (i != n - 1)
+		printf(" ");
+	}
+	printf("\n");
+
+	printf("\nafter quick_sort\n");
+	quick_sort(A, 0, n - 1);
+	for (int i = 0; i < n; i++){
+	  printf("%d", A[i]);
 	  if (i != n - 1)
 		printf(" ");
 	}
