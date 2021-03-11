@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2021/01/14 00:29:29 by jtanaka          ###   ########.fr        #
+#    Updated: 2021/03/12 01:38:39 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRCS =	ft_strlen.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_lstnew.c \
+		ft_lstadd_back_new.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
