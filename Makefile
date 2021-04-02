@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2021/01/14 00:29:29 by jtanaka          ###   ########.fr        #
+#    Updated: 2021/04/02 17:35:53 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,14 +66,16 @@ $(NAME): ${OBJS}
 	ar rc ${NAME} ${OBJS}
 
 clean:
-	${RM} ${OBJS} ${B_OBJS}
+	${RM} ${OBJS}
 
 fclean: clean
-	${RM} ${NAME}
+	${RM} ${NAME} libft.so
 
 re: fclean all
 
-bonus: ${B_OBJS} ${OBJS}
-	ar rc ${NAME} ${B_OBJS} ${OBJS}
+# for libft-unit-test on linux
+# https://github.com/alelievr/libft-unit-test
+so:
+	gcc -shared -o libft.so ${SRCS}
 
-.PHONY: all clean fclean re so bonus
+.PHONY: all clean fclean re so
