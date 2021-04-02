@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 01:04:24 by jtanaka           #+#    #+#             */
-/*   Updated: 2020/10/22 17:49:25 by jtanaka          ###   ########.fr       */
+/*   Updated: 2021/04/02 18:59:45 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	*src_ptr;
 	size_t			idx;
 
-	dest_ptr = (unsigned char*)dest;
-	src_ptr = (unsigned char*)src;
+	dest_ptr = (unsigned char *)dest;
+	src_ptr = (unsigned char *)src;
 	idx = 0;
 	while (idx < n)
 	{
