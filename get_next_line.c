@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 02:22:38 by jtanaka           #+#    #+#             */
-/*   Updated: 2021/01/13 23:49:48 by jtanaka          ###   ########.fr       */
+/*   Updated: 2021/04/02 19:09:43 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	join_line_from_save(char **line, char **save)
 			return (ERROR);
 		tmp = *save;
 		*save = ft_substr(ft_strchr(*save, '\n') + 1, 0,
-								ft_strlen(ft_strchr(*save, '\n') + 1));
+				ft_strlen(ft_strchr(*save, '\n') + 1));
 		free(tmp);
 		if (!(*save))
 			return (ERROR);
@@ -46,7 +46,8 @@ static int	split_by_newline(char **line, char **save, char *buf)
 	char	*old_line;
 	char	*tmp;
 
-	if (!(tmp = ft_substr(buf, 0, ft_strchr(buf, '\n') - buf)))
+	tmp = ft_substr(buf, 0, ft_strchr(buf, '\n') - buf);
+	if (!tmp)
 		return (ERROR);
 	old_line = *line;
 	*line = ft_strjoin(*line, tmp);
@@ -54,8 +55,9 @@ static int	split_by_newline(char **line, char **save, char *buf)
 	free(tmp);
 	if (!(*line))
 		return (ERROR);
-	if (!(*save = ft_substr(ft_strchr(buf, '\n') + 1, 0,
-								ft_strlen(ft_strchr(buf, '\n') + 1))))
+	*save = ft_substr(ft_strchr(buf, '\n') + 1, 0,
+			ft_strlen(ft_strchr(buf, '\n') + 1));
+	if (!(*save))
 		return (ERROR);
 	return (SUCCESS);
 }
@@ -79,7 +81,8 @@ static int	read_process(int fd, char **line, char **save)
 	char		*buf;
 
 	ret = CONTINUE_READ;
-	if (!(buf = malloc(BUFFER_SIZE + 1)))
+	buf = malloc(BUFFER_SIZE + 1);
+	if (!buf)
 		return (ERROR);
 	while (ret == CONTINUE_READ && (read_size = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
