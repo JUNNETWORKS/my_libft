@@ -6,7 +6,7 @@
 #    By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/10 04:46:14 by jtanaka           #+#    #+#              #
-#    Updated: 2021/04/02 17:35:53 by jtanaka          ###   ########.fr        #
+#    Updated: 2021/04/02 20:22:00 by jtanaka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS =	ft_strlen.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
+		ft_get_digit.c \
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_putchar_fd.c \

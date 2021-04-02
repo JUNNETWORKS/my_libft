@@ -6,7 +6,7 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 00:05:30 by jtanaka           #+#    #+#             */
-/*   Updated: 2021/04/02 17:09:39 by jtanaka          ###   ########.fr       */
+/*   Updated: 2021/04/02 20:22:47 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 int					get_split_size(char *str, char c);
 char				**ft_split(char const *s, char c);
+int					get_digit(int n);
+int					itoa_recursive(char *result, int n);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);

@@ -6,28 +6,13 @@
 /*   By: jtanaka <jtanaka@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 02:42:43 by jtanaka           #+#    #+#             */
-/*   Updated: 2021/04/02 18:47:55 by jtanaka          ###   ########.fr       */
+/*   Updated: 2021/04/02 20:22:33 by jtanaka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	get_digit(int n)
-{
-	int		digit;
-
-	if (n == 0)
-		return (1);
-	digit = 0;
-	while (n)
-	{
-		digit++;
-		n /= 10;
-	}
-	return (digit);
-}
-
-static	int	itoa_recursive(char *result, int n)
+int	itoa_recursive(char *result, int n)
 {
 	int	idx;
 	int	sign;
